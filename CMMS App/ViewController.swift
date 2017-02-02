@@ -8,9 +8,6 @@
 
 import UIKit
 
-// Spencer's meaningless comment, but it has boobs so thats cool I guess --> ( . )( . ) <--sfsdfsf
-
-// heres a vag and b-hole ).(
 
 class ViewController: UIViewController {
 
