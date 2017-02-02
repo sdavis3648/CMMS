@@ -8,8 +8,6 @@
 
 import UIKit
 
-//notification test 2
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
