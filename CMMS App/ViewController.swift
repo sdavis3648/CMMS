@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: Properties
+    @IBOutlet weak var workOrderTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var priorityValueButtons: UISegmentedControl!
+    
+    //MARK: Actions
+    @IBAction func dateTextField(_ sender: UITextField, forEvent event: UIEvent) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

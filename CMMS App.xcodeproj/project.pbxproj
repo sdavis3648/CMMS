@@ -13,6 +13,9 @@
 		09C4C7B81E43E5EA00183551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C4C7B71E43E5EA00183551 /* Assets.xcassets */; };
 		09C4C7BB1E43E5EA00183551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */; };
 		09C4C7C61E43E5EA00183551 /* CMMS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4C7C51E43E5EA00183551 /* CMMS_AppTests.swift */; };
+		09E0C53F1E4A92DB00E50524 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09E0C53E1E4A92DB00E50524 /* GoogleService-Info.plist */; };
+		1A320BBC400FF99556736E06 /* Pods_CMMS_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */; };
+		DBFC1554C0AF657D8E86CBF9 /* Pods_CMMS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A7F9938CD081EDC4BE9D37 /* Pods_CMMS_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,13 @@
 		09C4C7C11E43E5EA00183551 /* CMMS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CMMS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C4C7C51E43E5EA00183551 /* CMMS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMS_AppTests.swift; sourceTree = "<group>"; };
 		09C4C7C71E43E5EA00183551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E0C53E1E4A92DB00E50524 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.debug.xcconfig"; sourceTree = "<group>"; };
+		6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.release.xcconfig"; sourceTree = "<group>"; };
+		73048C5CA1DE168F5A6CDE08 /* Pods-CMMS AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMMS_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A7F9938CD081EDC4BE9D37 /* Pods_CMMS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMMS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2154EC66E0BBF17AF65C2E /* Pods-CMMS AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFC1554C0AF657D8E86CBF9 /* Pods_CMMS_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A320BBC400FF99556736E06 /* Pods_CMMS_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,8 @@
 				09C4C7AF1E43E5EA00183551 /* CMMS App */,
 				09C4C7C41E43E5EA00183551 /* CMMS AppTests */,
 				09C4C7AE1E43E5EA00183551 /* Products */,
+				753CC6A9685C54FA59F7A6D3 /* Pods */,
+				2DAFF322ABADE5CF7770F710 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +97,7 @@
 				09C4C7B71E43E5EA00183551 /* Assets.xcassets */,
 				09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */,
 				09C4C7BC1E43E5EA00183551 /* Info.plist */,
+				09E0C53E1E4A92DB00E50524 /* GoogleService-Info.plist */,
 			);
 			path = "CMMS App";
 			sourceTree = "<group>";
@@ -96,6 +111,26 @@
 			path = "CMMS AppTests";
 			sourceTree = "<group>";
 		};
+		2DAFF322ABADE5CF7770F710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6A7F9938CD081EDC4BE9D37 /* Pods_CMMS_App.framework */,
+				78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		753CC6A9685C54FA59F7A6D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */,
+				6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */,
+				DD2154EC66E0BBF17AF65C2E /* Pods-CMMS AppTests.debug.xcconfig */,
+				73048C5CA1DE168F5A6CDE08 /* Pods-CMMS AppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09C4C7CA1E43E5EA00183551 /* Build configuration list for PBXNativeTarget "CMMS App" */;
 			buildPhases = (
+				7A130AE00D462797D9F20DD4 /* [CP] Check Pods Manifest.lock */,
 				09C4C7A91E43E5EA00183551 /* Sources */,
 				09C4C7AA1E43E5EA00183551 /* Frameworks */,
 				09C4C7AB1E43E5EA00183551 /* Resources */,
+				2743EB423BBDB793F026C1D9 /* [CP] Embed Pods Frameworks */,
+				72BBCC870E446512F2C83BFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09C4C7CD1E43E5EA00183551 /* Build configuration list for PBXNativeTarget "CMMS AppTests" */;
 			buildPhases = (
+				578DE94E9F62E4DCAD0E386D /* [CP] Check Pods Manifest.lock */,
 				09C4C7BD1E43E5EA00183551 /* Sources */,
 				09C4C7BE1E43E5EA00183551 /* Frameworks */,
 				09C4C7BF1E43E5EA00183551 /* Resources */,
+				819F766AD32DCBB3C019D70A /* [CP] Embed Pods Frameworks */,
+				2CC724CF1E61113CCC8FA180 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +222,7 @@
 			files = (
 				09C4C7BB1E43E5EA00183551 /* LaunchScreen.storyboard in Resources */,
 				09C4C7B81E43E5EA00183551 /* Assets.xcassets in Resources */,
+				09E0C53F1E4A92DB00E50524 /* GoogleService-Info.plist in Resources */,
 				09C4C7B61E43E5EA00183551 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +235,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2743EB423BBDB793F026C1D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CC724CF1E61113CCC8FA180 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		578DE94E9F62E4DCAD0E386D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72BBCC870E446512F2C83BFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A130AE00D462797D9F20DD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		819F766AD32DCBB3C019D70A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09C4C7A91E43E5EA00183551 /* Sources */ = {
@@ -337,6 +472,7 @@
 		};
 		09C4C7CB1E43E5EA00183551 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CMMS App/Info.plist";
@@ -349,6 +485,7 @@
 		};
 		09C4C7CC1E43E5EA00183551 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CMMS App/Info.plist";
@@ -361,6 +498,7 @@
 		};
 		09C4C7CE1E43E5EA00183551 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD2154EC66E0BBF17AF65C2E /* Pods-CMMS AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -375,6 +513,7 @@
 		};
 		09C4C7CF1E43E5EA00183551 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73048C5CA1DE168F5A6CDE08 /* Pods-CMMS AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -406,6 +545,7 @@
 				09C4C7CC1E43E5EA00183551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C4C7CD1E43E5EA00183551 /* Build configuration list for PBXNativeTarget "CMMS AppTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +554,7 @@
 				09C4C7CF1E43E5EA00183551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
