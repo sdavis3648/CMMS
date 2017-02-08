@@ -55,6 +55,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <connections>
+                                                    <action selector="dateTextField:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="E8o-6V-YQc"/>
                                                     <action selector="dateTextField:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3A-Xf-usS"/>
                                                 </connections>
                                             </textField>
