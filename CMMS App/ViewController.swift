@@ -13,23 +13,37 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     //MARK: Properties
     @IBOutlet weak var workOrderTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var priorityValueButtons: UISegmentedControl!
-    @IBOutlet weak var dateTextField: UIStackView!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        workOrderTextField.text = textField.text
+        nameTextField.text = textField.text
+        dateTextField.text = textField.text
+        locationTextField.text = textField.text
+        descriptionTextField.text = textField.text
     }
     
     //MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // Dismiss the picker if the user canceled.
+        dismiss(animated: true, completion: nil)
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -49,7 +63,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         
         // Hide the keyboard.
+        workOrderTextField.resignFirstResponder()
         nameTextField.resignFirstResponder()
+        dateTextField.resignFirstResponder()
+        locationTextField.resignFirstResponder()
+        descriptionTextField.resignFirstResponder()
         
         // UIImagePickerController is a view controller that lets a user pick media from their photo library.
         let imagePickerController = UIImagePickerController()
@@ -61,5 +79,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
+        
+    
+    @IBAction func prioritySegmentedButton(_ sender: UISegmentedControl) {
+    }
+    
+    
 }
 
