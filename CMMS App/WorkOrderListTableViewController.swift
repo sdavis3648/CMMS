@@ -47,5 +47,13 @@ class WorkOrderListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Harry's House"
     }
+    /* section below is to have tableviewcells populate dynamically
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let section = indexPath.section
+        
+    }
+    */
+    
 
 }
