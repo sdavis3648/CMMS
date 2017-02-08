@@ -16,6 +16,7 @@
 		09E0C53F1E4A92DB00E50524 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09E0C53E1E4A92DB00E50524 /* GoogleService-Info.plist */; };
 		1A320BBC400FF99556736E06 /* Pods_CMMS_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */; };
 		62B212FD1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */; };
+		62B212FF1E4AA1DC00E4E8C6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */; };
 		DBFC1554C0AF657D8E86CBF9 /* Pods_CMMS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A7F9938CD081EDC4BE9D37 /* Pods_CMMS_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		09E0C53E1E4A92DB00E50524 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.debug.xcconfig"; sourceTree = "<group>"; };
 		62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderListTableViewController.swift; sourceTree = "<group>"; };
+		62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.release.xcconfig"; sourceTree = "<group>"; };
 		73048C5CA1DE168F5A6CDE08 /* Pods-CMMS AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMMS_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				09C4C7B01E43E5EA00183551 /* AppDelegate.swift */,
 				09C4C7B21E43E5EA00183551 /* ViewController.swift */,
 				09C4C7B41E43E5EA00183551 /* Main.storyboard */,
+				62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */,
 				62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */,
 				09C4C7B71E43E5EA00183551 /* Assets.xcassets */,
 				09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */,
@@ -340,6 +343,7 @@
 				62B212FD1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift in Sources */,
 				09C4C7B31E43E5EA00183551 /* ViewController.swift in Sources */,
 				09C4C7B11E43E5EA00183551 /* AppDelegate.swift in Sources */,
+				62B212FF1E4AA1DC00E4E8C6 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

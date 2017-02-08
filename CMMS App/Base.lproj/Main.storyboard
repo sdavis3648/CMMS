@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="401.64917541229386"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Work Order List Table View Controller-->
         <scene sceneID="sEt-JN-Cml">
             <objects>
-                <tableViewController id="otg-Xa-z2X" sceneMemberID="viewController">
+                <tableViewController id="otg-Xa-z2X" customClass="WorkOrderListTableViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="sCd-10-rfb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="-302.6986506746627"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="Y0a-dp-P9T">
             <objects>
-                <viewController id="UNv-SY-uqH" sceneMemberID="viewController">
+                <viewController id="UNv-SY-uqH" customClass="DashboardViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fY-47-07l"/>
                         <viewControllerLayoutGuide type="bottom" id="IVM-vE-D1A"/>
@@ -195,13 +195,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q2U-BN-EMB">
                                 <rect key="frame" x="125" y="151" width="124" height="68"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-gB-N6o">
-                                        <rect key="frame" x="5" y="0.0" width="114" height="30"/>
-                                        <state key="normal" title="New Work Order"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfG-9u-uVA">
-                                        <rect key="frame" x="0.0" y="38" width="124" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
                                         <state key="normal" title="View Work Orders"/>
+                                        <connections>
+                                            <segue destination="otg-Xa-z2X" kind="show" id="cQy-nE-q2s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-gB-N6o">
+                                        <rect key="frame" x="5" y="38" width="114" height="30"/>
+                                        <state key="normal" title="New Work Order"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="XRf-km-sYl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
