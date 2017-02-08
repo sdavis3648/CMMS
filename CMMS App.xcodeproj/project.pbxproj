@@ -103,12 +103,12 @@
 			children = (
 				09C4C7B01E43E5EA00183551 /* AppDelegate.swift */,
 				09C4C7B21E43E5EA00183551 /* ViewController.swift */,
-				09C4C7B41E43E5EA00183551 /* Main.storyboard */,
 				62B213041E4AB6A900E4E8C6 /* constants.swift */,
 				62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */,
 				62B213001E4AA58D00E4E8C6 /* LocationsTableViewController.swift */,
 				62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */,
 				62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */,
+				09C4C7B41E43E5EA00183551 /* Main.storyboard */,
 				09C4C7B71E43E5EA00183551 /* Assets.xcassets */,
 				09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */,
 				09C4C7BC1E43E5EA00183551 /* Info.plist */,
