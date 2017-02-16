@@ -8,9 +8,24 @@
 
 import UIKit
 
-class WorkOrderViewController: UIViewController {
-
+class WorkOrderViewController: UIViewController{
+    var selectedRow:Int!
+    
+    @IBOutlet weak var workOrderNameText: UITextField!
+    @IBOutlet weak var enteredByNameText: UITextField!
+    @IBOutlet weak var enteredDateText: UITextField!
+    @IBOutlet weak var locationText: UITextField!
+    @IBOutlet weak var descriptionText: UITextField!
+    @IBOutlet weak var prioritySegmentedControl: UISegmentedControl!
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
+        self.workOrderNameText.text = workorderNumbers[selectedRow]
+        self.enteredDateText.text = workorderDates[selectedRow]
+        self.enteredByNameText.text = workorderNames[selectedRow]
+        self.descriptionText.text = workorderDescriptions[selectedRow]
+        self.locationText.text = workorderLocations[selectedRow]
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

@@ -9,7 +9,7 @@
 import UIKit
 
 class WorkOrderListTableViewController: UITableViewController {
-    
+    var selectedRow:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,15 @@ class WorkOrderListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WorkOrderSelectionSegue",
+            let destination = segue.destination as? WorkOrderViewController,
+            let rowIndex = tableView.indexPathForSelectedRow?.row
+        {
+            destination.selectedRow = rowIndex
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,13 +56,6 @@ class WorkOrderListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Harry's House"
     }
-    /* section below is to have tableviewcells populate dynamically
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
-        let section = indexPath.section
-        
-    }
-    */
-    
+
 
 }

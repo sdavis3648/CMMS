@@ -8,7 +8,7 @@
 
 import Foundation
 
-var workorderNumbers:[Int] = [100001, 100002, 100003, 100004]
+var workorderNumbers = ["100001", "100002", "100003", "100004"]
 var workorderDescriptions = ["Change porch light", "Replace gutters", "Mow the yard", "Build a garage"]
 var workorderLocations = ["Porch", "Exterior", "Yard", "Backyard"]
 var workorderNames = ["Harry", "Harry", "Harry", "Harry"]
