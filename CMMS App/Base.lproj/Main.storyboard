@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ne Work Order View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NeWorkOrderViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,7 +56,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1iT-o5-FjW">
-                                        <rect key="frame" x="0.0" y="190" width="138.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="190" width="162.5" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-gM-CX8">
                                                 <rect key="frame" x="0.0" y="0.0" width="59.5" height="20.5"/>
@@ -65,11 +65,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-5F-eSv">
-                                                <rect key="frame" x="67.5" y="0.0" width="71" height="29"/>
+                                                <rect key="frame" x="67.5" y="0.0" width="95" height="29"/>
                                                 <segments>
                                                     <segment title="1"/>
                                                     <segment title="2"/>
                                                     <segment title="3"/>
+                                                    <segment title="4"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="prioritySegmentedButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="BBF-PN-SwH"/>
@@ -101,12 +102,23 @@
                             <constraint firstItem="6eM-qn-HcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xiG-a6-ZEO"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uyl-Gb-Kha">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NO5-ll-OPK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GrY-MQ-Rc1">
+                            <connections>
+                                <action selector="SaveWorkOrderButton:" destination="BYZ-38-t0r" id="uA6-Cd-VP0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateTextField" destination="lsV-WE-44w" id="n2c-ZJ-9SE"/>
                         <outlet property="descriptionTextField" destination="CYR-SZ-TB5" id="hPZ-z7-Nu1"/>
                         <outlet property="locationTextField" destination="fDR-yI-q0G" id="e8y-Xr-nGa"/>
                         <outlet property="nameTextField" destination="STn-oK-9Ks" id="qXD-rO-Jio"/>
                         <outlet property="photoImageView" destination="Nd1-qS-mOP" id="6f1-8I-DWi"/>
+                        <outlet property="prioritySelector" destination="1OH-5F-eSv" id="zfX-Vw-XOR"/>
                         <outlet property="workOrderTextField" destination="BTz-gT-oqK" id="Nf9-K3-RL8"/>
                     </connections>
                 </viewController>
@@ -117,7 +129,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="852" y="400.74962518740631"/>
+            <point key="canvasLocation" x="1596" y="401"/>
         </scene>
         <!--Locations Table View Controller-->
         <scene sceneID="sEt-JN-Cml">
@@ -403,7 +415,7 @@
                                         <rect key="frame" x="5" y="38" width="114" height="30"/>
                                         <state key="normal" title="New Work Order"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="XRf-km-sYl"/>
+                                            <segue destination="Eq9-Oh-eCc" kind="presentation" id="8mr-VP-5l4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -438,6 +450,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IH4-nT-5kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-927.20000000000005" y="35.532233883058474"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OUa-gs-w6H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eq9-Oh-eCc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HDf-66-U0a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jSE-L4-4rh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTL-7J-Z3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="400.74962518740631"/>
         </scene>
     </scenes>
     <resources>

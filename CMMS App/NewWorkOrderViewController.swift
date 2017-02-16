@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewWorkOrderViewController.swift
 //  CMMS App
 //
 //  Created by Spencer Davis on 2/2/17.
@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
     
     //MARK: Properties
+    
     @IBOutlet weak var workOrderTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var prioritySelector: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
 
     //MARK: UITextFieldDelegate
+    
+    @IBAction func SaveWorkOrderButton(_ sender: Any) {
+        let saveWorkOrder = DataService()
+        let description = self.descriptionTextField.text
+        let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
+        saveWorkOrder.insertWorkOrder(description: description!, priority: priority!)
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
@@ -79,7 +91,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
-        
+    
     
     @IBAction func prioritySegmentedButton(_ sender: UISegmentedControl) {
     }
