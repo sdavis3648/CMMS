@@ -9,7 +9,6 @@
 import UIKit
 
 class WorkOrderListTableViewController: UITableViewController {
-    var selectedRow:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,6 @@
 
 import Foundation
 
-let BASE_URL = "https://cmms-c6194.firebaseio.com/"
 
 var workorderNumbers = ["100001", "100002", "100003", "100004"]
 var workorderDescriptions = ["Change porch light", "Replace gutters", "Mow the yard", "Build a garage"]

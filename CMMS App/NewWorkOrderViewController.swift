@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -29,13 +28,30 @@ class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImageP
 
     //MARK: UITextFieldDelegate
     
+    @IBAction func showPopUp(_ sender: Any) {
+        //Save to Firebase
+        let saveWorkOrder = DataService()
+        let description = self.descriptionTextField.text
+        let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
+        saveWorkOrder.insertWorkOrder(description: description!, priority: priority!)
+        
+        //Popup view controller
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workorderCompletion") as! WorkOrderCompletedPopUpViewController
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParentViewController: self)
+        
+        
+    }
+    /*
     @IBAction func SaveWorkOrderButton(_ sender: Any) {
         let saveWorkOrder = DataService()
         let description = self.descriptionTextField.text
         let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
         saveWorkOrder.insertWorkOrder(description: description!, priority: priority!)
     }
-    
+    */
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.

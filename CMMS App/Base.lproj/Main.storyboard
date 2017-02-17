@@ -104,10 +104,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uyl-Gb-Kha">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NO5-ll-OPK"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="GrY-MQ-Rc1">
                             <connections>
-                                <action selector="SaveWorkOrderButton:" destination="BYZ-38-t0r" id="uA6-Cd-VP0"/>
+                                <action selector="showPopUp:" destination="BYZ-38-t0r" id="7Mw-Pm-YMN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -129,7 +128,43 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1596" y="401"/>
+            <point key="canvasLocation" x="852" y="378"/>
+        </scene>
+        <!--Work Order Completed Pop Up View Controller-->
+        <scene sceneID="wjk-w7-j4V">
+            <objects>
+                <viewController storyboardIdentifier="workorderCompletion" id="56W-ph-J5l" customClass="WorkOrderCompletedPopUpViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YxS-yJ-9QF"/>
+                        <viewControllerLayoutGuide type="bottom" id="msj-i6-u7a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qBT-Pg-lUG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="thomas" translatesAutoresizingMaskIntoConstraints="NO" id="aXM-bU-fF7">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Sbw-sx-bgg" appends="YES" id="pM7-Vo-I2a"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aXM-bU-fF7" firstAttribute="centerX" secondItem="qBT-Pg-lUG" secondAttribute="centerX" id="aUu-qq-tq0"/>
+                            <constraint firstItem="aXM-bU-fF7" firstAttribute="centerY" secondItem="qBT-Pg-lUG" secondAttribute="centerY" id="j5S-LA-0V6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMd-6c-ED7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Sbw-sx-bgg">
+                    <connections>
+                        <action selector="closePopUp:" destination="56W-ph-J5l" id="PBl-sv-dO2"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1588" y="375"/>
         </scene>
         <!--Locations Table View Controller-->
         <scene sceneID="sEt-JN-Cml">
@@ -415,7 +450,7 @@
                                         <rect key="frame" x="5" y="38" width="114" height="30"/>
                                         <state key="normal" title="New Work Order"/>
                                         <connections>
-                                            <segue destination="Eq9-Oh-eCc" kind="presentation" id="8mr-VP-5l4"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="suA-j3-e1I"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -451,26 +486,9 @@
             </objects>
             <point key="canvasLocation" x="-927.20000000000005" y="35.532233883058474"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OUa-gs-w6H">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eq9-Oh-eCc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HDf-66-U0a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jSE-L4-4rh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bTL-7J-Z3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="852" y="400.74962518740631"/>
-        </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
+        <image name="thomas" width="74" height="73"/>
     </resources>
 </document>
