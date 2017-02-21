@@ -19,10 +19,13 @@
 		62B213011E4AA58D00E4E8C6 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213001E4AA58D00E4E8C6 /* LocationsTableViewController.swift */; };
 		62B213031E4AB4FA00E4E8C6 /* WorkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */; };
 		62B213051E4AB6A900E4E8C6 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213041E4AB6A900E4E8C6 /* constants.swift */; };
-		62B2130F1E55307400E4E8C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62B2130E1E55307400E4E8C6 /* GoogleService-Info.plist */; };
 		62B213111E553EC100E4E8C6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213101E553EC100E4E8C6 /* DataService.swift */; };
 		62B213131E569A1A00E4E8C6 /* WorkOrderCompletedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213121E569A1A00E4E8C6 /* WorkOrderCompletedPopUpViewController.swift */; };
 		62B213151E569F5700E4E8C6 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213141E569F5700E4E8C6 /* Notes.swift */; };
+		62B213191E57E0DE00E4E8C6 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213181E57E0DE00E4E8C6 /* WorkOrder.swift */; };
+		62B2131B1E58A6D200E4E8C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B2131A1E58A6D200E4E8C6 /* LoginViewController.swift */; };
+		62B2131D1E58A74100E4E8C6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B2131C1E58A74100E4E8C6 /* CreateAccountViewController.swift */; };
+		62B2131F1E58ABF800E4E8C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */; };
 		DBFC1554C0AF657D8E86CBF9 /* Pods_CMMS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A7F9938CD081EDC4BE9D37 /* Pods_CMMS_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,10 +56,13 @@
 		62B213001E4AA58D00E4E8C6 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderViewController.swift; sourceTree = "<group>"; };
 		62B213041E4AB6A900E4E8C6 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		62B2130E1E55307400E4E8C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62B213101E553EC100E4E8C6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		62B213121E569A1A00E4E8C6 /* WorkOrderCompletedPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderCompletedPopUpViewController.swift; sourceTree = "<group>"; };
 		62B213141E569F5700E4E8C6 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		62B213181E57E0DE00E4E8C6 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrder.swift; path = ../WorkOrder.swift; sourceTree = "<group>"; };
+		62B2131A1E58A6D200E4E8C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		62B2131C1E58A74100E4E8C6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.release.xcconfig"; sourceTree = "<group>"; };
 		73048C5CA1DE168F5A6CDE08 /* Pods-CMMS AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMMS_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +113,7 @@
 		09C4C7AF1E43E5EA00183551 /* CMMS App */ = {
 			isa = PBXGroup;
 			children = (
+				62B213181E57E0DE00E4E8C6 /* WorkOrder.swift */,
 				09C4C7B01E43E5EA00183551 /* AppDelegate.swift */,
 				09C4C7B21E43E5EA00183551 /* NewWorkOrderViewController.swift */,
 				62B213041E4AB6A900E4E8C6 /* constants.swift */,
@@ -116,12 +123,14 @@
 				62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */,
 				62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */,
 				09C4C7B41E43E5EA00183551 /* Main.storyboard */,
+				62B2131A1E58A6D200E4E8C6 /* LoginViewController.swift */,
+				62B2131C1E58A74100E4E8C6 /* CreateAccountViewController.swift */,
 				62B213141E569F5700E4E8C6 /* Notes.swift */,
 				62B213121E569A1A00E4E8C6 /* WorkOrderCompletedPopUpViewController.swift */,
 				09C4C7B71E43E5EA00183551 /* Assets.xcassets */,
 				09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */,
 				09C4C7BC1E43E5EA00183551 /* Info.plist */,
-				62B2130E1E55307400E4E8C6 /* GoogleService-Info.plist */,
+				62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */,
 			);
 			path = "CMMS App";
 			sourceTree = "<group>";
@@ -245,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C4C7BB1E43E5EA00183551 /* LaunchScreen.storyboard in Resources */,
-				62B2130F1E55307400E4E8C6 /* GoogleService-Info.plist in Resources */,
+				62B2131F1E58ABF800E4E8C6 /* GoogleService-Info.plist in Resources */,
 				09C4C7B81E43E5EA00183551 /* Assets.xcassets in Resources */,
 				09C4C7B61E43E5EA00183551 /* Main.storyboard in Resources */,
 			);
@@ -358,13 +367,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B2131B1E58A6D200E4E8C6 /* LoginViewController.swift in Sources */,
 				62B213011E4AA58D00E4E8C6 /* LocationsTableViewController.swift in Sources */,
 				62B213151E569F5700E4E8C6 /* Notes.swift in Sources */,
 				62B212FD1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift in Sources */,
 				62B213031E4AB4FA00E4E8C6 /* WorkOrderViewController.swift in Sources */,
+				62B2131D1E58A74100E4E8C6 /* CreateAccountViewController.swift in Sources */,
 				62B213051E4AB6A900E4E8C6 /* constants.swift in Sources */,
 				09C4C7B31E43E5EA00183551 /* NewWorkOrderViewController.swift in Sources */,
 				62B213131E569A1A00E4E8C6 /* WorkOrderCompletedPopUpViewController.swift in Sources */,
+				62B213191E57E0DE00E4E8C6 /* WorkOrder.swift in Sources */,
 				09C4C7B11E43E5EA00183551 /* AppDelegate.swift in Sources */,
 				62B212FF1E4AA1DC00E4E8C6 /* DashboardViewController.swift in Sources */,
 				62B213111E553EC100E4E8C6 /* DataService.swift in Sources */,

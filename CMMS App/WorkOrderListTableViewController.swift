@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import Firebase
+
 
 class WorkOrderListTableViewController: UITableViewController {
 
+    let ref = FIRDatabase.database().reference(withPath: "work-orders")
+    var titlesArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        ref.observe(.value, with: {
+            snapshot in
+            let workDict = snapshot.value as? [String : AnyObject] ?? [:]
+            print(workDict)
+        })
+        
     }
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WorkOrderSelectionSegue",
