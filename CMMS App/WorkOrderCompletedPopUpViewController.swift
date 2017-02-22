@@ -24,6 +24,7 @@ class WorkOrderCompletedPopUpViewController: UIViewController {
     
     @IBAction func closePopUp(_ sender: UITapGestureRecognizer) {
         self.view.removeFromSuperview()
+        _ = navigationController?.popViewController(animated: true)
     }
 
     

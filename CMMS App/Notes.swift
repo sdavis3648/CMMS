@@ -16,7 +16,7 @@ import Foundation
  Priority button needs to give out Integer, not string
  Work Order name auto-fill
  Name would auto-fill
- Set up users within authentication in Firebase
+ ----Set up users within authentication in Firebase----need some more tweaking
  Re-define "Date" to "Completion Date" and add current date/timestamp when saved to Firebase
  Create database of Assets, have Location auto-populate from that database
  After closing popUp, return to Dashboard

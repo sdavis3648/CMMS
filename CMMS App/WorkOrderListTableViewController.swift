@@ -11,21 +11,26 @@ import Firebase
 
 
 class WorkOrderListTableViewController: UITableViewController {
-
-    let ref = FIRDatabase.database().reference(withPath: "work-orders")
-    var titlesArray = [String]()
+    var workordersArray = [FIRDataSnapshot]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ref.observe(.value, with: {
-            snapshot in
-            let workDict = snapshot.value as? [String : AnyObject] ?? [:]
-            print(workDict)
-        })
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let ref = FIRDatabase.database().reference(withPath: "work-orders")
+        ref.observe(.value, with: { snapshot in
+            var newWorkOrders = [FIRDataSnapshot]()
+            for workorder in snapshot.children {
+                newWorkOrders.append(workorder as! FIRDataSnapshot)
+            }
+            
+            self.workordersArray = newWorkOrders
+            self.tableView.reloadData()
+        })
+
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WorkOrderSelectionSegue",
@@ -50,17 +55,15 @@ class WorkOrderListTableViewController: UITableViewController {
 */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return workorderNumbers.count
+        return workordersArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-        cell.textLabel?.text = workorderDescriptions[indexPath.row]
+        let workOrder = workordersArray[indexPath.row]
+        let workOrderDescription = workOrder.childSnapshot(forPath: "Description").value as! String
+        cell.textLabel?.text = workOrderDescription
         return cell
-    }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Harry's House"
     }
 
 
