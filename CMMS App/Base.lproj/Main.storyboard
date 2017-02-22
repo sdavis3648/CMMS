@@ -31,7 +31,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STn-oK-9Ks">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/User" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STn-oK-9Ks">
                                         <rect key="frame" x="0.0" y="38" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -112,7 +112,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dateTextField" destination="lsV-WE-44w" id="n2c-ZJ-9SE"/>
+                        <outlet property="dateTextField" destination="lsV-WE-44w" id="am8-vO-1iz"/>
                         <outlet property="descriptionTextField" destination="CYR-SZ-TB5" id="hPZ-z7-Nu1"/>
                         <outlet property="locationTextField" destination="fDR-yI-q0G" id="e8y-Xr-nGa"/>
                         <outlet property="nameTextField" destination="STn-oK-9Ks" id="qXD-rO-Jio"/>
@@ -179,11 +179,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Yk-8w-m20" id="lwt-S9-EOw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oIn-Lm-fPd">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -393,6 +393,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-gB-N6o">
                                         <rect key="frame" x="5" y="38" width="114" height="30"/>
                                         <state key="normal" title="New Work Order"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="tah-eq-Drc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -667,4 +670,7 @@
         <image name="defaultPhoto" width="320" height="320"/>
         <image name="thomas" width="74" height="73"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tah-eq-Drc"/>
+    </inferredMetricsTieBreakers>
 </document>

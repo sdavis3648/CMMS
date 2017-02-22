@@ -10,5 +10,5 @@ import Foundation
 
 class WorkOrder {
     var Description: String = ""
-    var Priority: String = ""
+    var Priority: Int = 0
 }

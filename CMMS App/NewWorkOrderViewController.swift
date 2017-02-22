@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     
     //MARK: Properties
     
