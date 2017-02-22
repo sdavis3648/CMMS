@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     
     //MARK: Properties
     
@@ -22,6 +22,10 @@ class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var prioritySelector: UISegmentedControl!
     
     override func viewDidLoad() {
+       /* 
+         let user = FIRAuth.auth()?.currentUser
+        nameTextField.text = user
+        */
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -32,8 +36,8 @@ class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImageP
         //Save to Firebase
         let saveWorkOrder = DataService()
         let description = self.descriptionTextField.text
-        let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
-        saveWorkOrder.insertWorkOrder(description: description!, priority: priority!)
+        let priority = self.prioritySelector.selectedSegmentIndex+1
+        saveWorkOrder.insertWorkOrder(description: description!, priority: priority)
         
         //Popup view controller
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workorderCompletion") as! WorkOrderCompletedPopUpViewController

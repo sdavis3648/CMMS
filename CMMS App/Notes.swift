@@ -13,7 +13,7 @@ import Foundation
  ***Create Work Order View Controller****
  Add photo to save to Firebase
  Make ImageView look good, aspects/constraints
- Priority button needs to give out Integer, not string
+ ✓ Priority button needs to give out Integer, not string
  Work Order name auto-fill
  Name would auto-fill
  ----Set up users within authentication in Firebase----need some more tweaking
