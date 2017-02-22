@@ -16,19 +16,19 @@ import Foundation
  Priority button needs to give out Integer, not string
  Work Order name auto-fill
  Name would auto-fill
- ----Set up users within authentication in Firebase----need some more tweaking
+ --in progress, needs tweaking--Set up users within authentication in Firebase
  Re-define "Date" to "Completion Date" and add current date/timestamp when saved to Firebase
  Create database of Assets, have Location auto-populate from that database
- After closing popUp, return to Dashboard
+ --done, returns to view work orders list--After closing popUp, return to Dashboard
  Loading bar linked to Firebase to confirm loaded to database
  Status indentifier (open and closed)
  
  ***View Work Order****
- Pull data from Firebase into Tableview cells
+ --done--Pull data from Firebase into Tableview cells
  Add edit/save button
  Customize TableViewCell for expandable info and mini-image
  Ability to close work order
- Add 4th priority
+ --done--Add 4th priority
  Table view list is filterable or searchable
  
  *** Other ***

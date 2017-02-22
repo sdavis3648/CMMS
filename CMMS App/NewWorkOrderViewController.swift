@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -22,6 +23,24 @@ class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var prioritySelector: UISegmentedControl!
     
     override func viewDidLoad() {
+        let ref = FIRDatabase.database().reference(withPath: "work-orders")
+        //NEED TO DO THE QUERY LIMITED TO LAST HERE.....
+        ref.child("WorkOrderNumber").observeSingleEvent(of: .value, with: { (snapshot) in
+            let latestNumber = snapshot.value
+            print(latestNumber)
+        })
+    
+        /*
+        ref.queryLimited(toLast: 1).observe(.value, with: { (snapshot) in
+            let latestDescription = snapshot.value as? [String: AnyObject] ?? [:]
+            print(latestDescription)
+     })
+     */
+    
+        //observe(.value, with: { (snapshot) in
+
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -31,9 +50,10 @@ class NeWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func showPopUp(_ sender: Any) {
         //Save to Firebase
         let saveWorkOrder = DataService()
+        let woNumber:Int? = Int(self.workOrderTextField.text!)
         let description = self.descriptionTextField.text
         let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
-        saveWorkOrder.insertWorkOrder(description: description!, priority: priority!)
+        saveWorkOrder.insertWorkOrder(woNumber: woNumber!,description: description!, priority: priority!)
         
         //Popup view controller
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workorderCompletion") as! WorkOrderCompletedPopUpViewController
