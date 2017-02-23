@@ -9,6 +9,7 @@ target 'CMMS App' do
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod ‘Firebase/Auth’
+pod ‘Firebase/Storage’
 
   target 'CMMS AppTests' do
     inherit! :search_paths

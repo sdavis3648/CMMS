@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ne Work Order View Controller-->
+        <!--New Work Order View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NeWorkOrderViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewWorkOrderViewController" customModule="CMMS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -179,11 +179,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Yk-8w-m20" id="lwt-S9-EOw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oIn-Lm-fPd">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -366,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33k-HL-4Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="-304"/>
+            <point key="canvasLocation" x="1836" y="-304"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="Y0a-dp-P9T">
@@ -413,10 +413,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SX-CT-769">
+                                <rect key="frame" x="16" y="418" width="343" height="30"/>
+                                <state key="normal" title="Image Playground"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q2U-BN-EMB" firstAttribute="centerX" secondItem="yTu-xi-Xrz" secondAttribute="centerX" id="417-qE-wQO"/>
+                            <constraint firstItem="0SX-CT-769" firstAttribute="top" secondItem="Q2U-BN-EMB" secondAttribute="bottom" constant="199" id="61I-8D-c1D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0SX-CT-769" secondAttribute="trailing" id="EPB-f2-KLE"/>
                             <constraint firstItem="S7S-5G-KxU" firstAttribute="top" secondItem="5fY-47-07l" secondAttribute="bottom" constant="30" id="IFJ-n1-My7"/>
                             <constraint firstItem="Q2U-BN-EMB" firstAttribute="top" secondItem="5fY-47-07l" secondAttribute="bottom" constant="87" id="J26-TP-0DH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="huc-9f-uge" secondAttribute="trailing" id="PvB-il-Gce"/>
@@ -424,6 +430,7 @@
                             <constraint firstItem="huc-9f-uge" firstAttribute="leading" secondItem="yTu-xi-Xrz" secondAttribute="leadingMargin" id="iJ5-xc-1Jl"/>
                             <constraint firstItem="IVM-vE-D1A" firstAttribute="top" secondItem="huc-9f-uge" secondAttribute="bottom" constant="120" id="ojD-xX-HD2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S7S-5G-KxU" secondAttribute="trailing" id="uah-sr-THa"/>
+                            <constraint firstItem="0SX-CT-769" firstAttribute="leading" secondItem="yTu-xi-Xrz" secondAttribute="leadingMargin" id="xCs-fI-0wx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4lt-ut-1nq"/>
