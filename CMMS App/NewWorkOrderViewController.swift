@@ -8,10 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Properties
+    
+    private var localPath: URL!
     
     @IBOutlet weak var workOrderTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,6 +25,7 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
     @IBOutlet weak var prioritySelector: UISegmentedControl!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -31,45 +35,34 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
 
     @IBAction func showPopUp(_ sender: Any) {
         //Save to Firebase Database
+        
         let saveWorkOrder = DataService()
         let woNumber:Int? = Int(self.workOrderTextField.text!)
         let description = self.descriptionTextField.text
         let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
-        saveWorkOrder.insertWorkOrder(woNumber: woNumber!,description: description!, priority: priority!)
         
         
-        /* WORKING ON SAVING IMAGE TO STORAGE
-        //Save image to Storage
-        let storageRef = FIRStorage.storage().reference().child("WorkOrderPhotos")
+        let imageName = NSUUID().uuidString
+        let storageRef = FIRStorage.storage().reference().child("WorkOrderPhotos/\(imageName).jpg")
         
-        //let data = UIImageJPEGRepresentation(photoImageView.image!, 0.8)!
-        let woNumber:Int? = Int(self.workOrderTextField.text!)
-        let fileName = "\(woNumber).jpg"
-        let imageRef = storageRef.child(fileName)
-        let path = imageRef.fullPath
-        let name = imageRef.name
-        let images = imageRef.parent()
-
-        
-        
-        let uploadTask = imageRef.putFile(photoURL as URL, metadata: nil) {metadata, error in
-            if let error = error {
-                print("Error with image upload")
-            } else {
-                let downloadURL = metadata!.downloadURL()
-            }
+        if let uploadData = UIImageJPEGRepresentation(self.photoImageView.image!, 1.0) {
+            storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print(error)
+                    return
+                }
+                let photoURL = metadata?.downloadURL()?.absoluteString
+                saveWorkOrder.insertWorkOrder(woNumber: woNumber!,description: description!, priority: priority!, photoURL: photoURL!)
+            })
+            
         }
-       
-        */
-        
-        
+
         //Popup view controller
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workorderCompletion") as! WorkOrderCompletedPopUpViewController
         self.addChildViewController(popUpVC)
         popUpVC.view.frame = self.view.frame
         self.view.addSubview(popUpVC.view)
         popUpVC.didMove(toParentViewController: self)
-        
         
     }
     
@@ -99,31 +92,32 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        /* WORKING ON SAVING IMAGE TO STORAGE
-        let imageUrl          = info[UIImagePickerControllerReferenceURL] as! NSURL
-        let imageName         = imageUrl.lastPathComponent
-        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let photoURL          = NSURL(fileURLWithPath: documentDirectory)
-        let localPath         = photoURL.appendingPathComponent(imageName!)
-        let image             = info[UIImagePickerControllerOriginalImage]as! UIImage
-        let data              = UIImagePNGRepresentation(image)
         
-        do
-        {
-            try data?.write(to: localPath!, options: Data.WritingOptions.atomic)
-        }
-        catch
-        {
-            // Catch exception here and act accordingly
-        }
-         */
- 
- 
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let imageUrl          = info[UIImagePickerControllerReferenceURL] as? NSURL
+        let imageName         = imageUrl?.lastPathComponent
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let photoURL          = NSURL(fileURLWithPath: documentDirectory)
+        let localPath         = photoURL.appendingPathComponent(imageName!)
+        
+        if !FileManager.default.fileExists(atPath: localPath!.path) {
+            do {
+                try UIImageJPEGRepresentation(image, 1.0)?.write(to: localPath!)
+                print("file saved")
+            }catch {
+                print("error saving file")
+            }
+        }
+        else {
+            print("file already exists")
+        }
+
     }
     
     //MARK: Actions

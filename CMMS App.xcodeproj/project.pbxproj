@@ -217,6 +217,7 @@
 				TargetAttributes = {
 					09C4C7AC1E43E5EA00183551 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YH7MUJR85U;
 						ProvisioningStyle = Automatic;
 					};
 					09C4C7C01E43E5EA00183551 = {
@@ -515,7 +516,9 @@
 			baseConfigurationReference = 2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YH7MUJR85U;
 				INFOPLIST_FILE = "CMMS App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.CMMS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +531,9 @@
 			baseConfigurationReference = 6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YH7MUJR85U;
 				INFOPLIST_FILE = "CMMS App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.CMMS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";

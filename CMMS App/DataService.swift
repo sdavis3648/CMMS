@@ -22,11 +22,12 @@ class DataService {
         self._WORKORDER_REF = self._BASE_REF.child("work-orders")
     }
 
-    func insertWorkOrder(woNumber: Int, description: String, priority: String){
+    func insertWorkOrder(woNumber: Int, description: String, priority: String, photoURL: String){
         let key = self._WORKORDER_REF.childByAutoId().key
         let workorder : NSDictionary = ["WorkOrderNumber" : woNumber,
                                         "Description" : description,
-                                        "Priority" : priority]
+                                        "Priority" : priority,
+                                        "PhotoURL": photoURL]
         self._WORKORDER_REF.updateChildValues(["/\(key)" : workorder])
     }
     
