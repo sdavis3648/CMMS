@@ -23,6 +23,8 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var prioritySelector: UISegmentedControl!
+    @IBOutlet weak var cameraImageView: UIImageView!
+    @IBOutlet weak var photoAlbumImageView: UIImageView!
     
     override func viewDidLoad() {
         
@@ -120,26 +122,42 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
 
     }
     
-    //MARK: Actions
-    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    @IBAction func selectImageFromCamera(_ sender: UITapGestureRecognizer) {
         
-        // Hide the keyboard.
         workOrderTextField.resignFirstResponder()
         nameTextField.resignFirstResponder()
         dateTextField.resignFirstResponder()
         locationTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
         
-        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
-        let imagePickerController = UIImagePickerController()
         
-        // Only allow photos to be picked, not taken.
-        imagePickerController.sourceType = .photoLibrary
-        
-        // Make sure ViewController is notified when the user picks an image.
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
+            imagePicker.allowsEditing = false
+            present(imagePicker, animated: true, completion: nil)
+        }
     }
+    
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        
+        workOrderTextField.resignFirstResponder()
+        nameTextField.resignFirstResponder()
+        dateTextField.resignFirstResponder()
+        locationTextField.resignFirstResponder()
+        descriptionTextField.resignFirstResponder()
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    //MARK:Actions
     
     
     @IBAction func prioritySegmentedButton(_ sender: UISegmentedControl) {

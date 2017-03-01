@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,40 +24,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6eM-qn-HcQ">
-                                <rect key="frame" x="16" y="84" width="343" height="546"/>
+                                <rect key="frame" x="16" y="84" width="343" height="539"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work Order Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-gT-oqK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qnm-mS-gXs">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work Order Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-gT-oqK">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsV-WE-44w">
+                                                <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/User" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STn-oK-9Ks">
                                         <rect key="frame" x="0.0" y="38" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsV-WE-44w">
-                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDR-yI-q0G">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-SZ-TB5">
-                                        <rect key="frame" x="0.0" y="152" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1iT-o5-FjW">
-                                        <rect key="frame" x="0.0" y="190" width="162.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="152" width="162.5" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-gM-CX8">
                                                 <rect key="frame" x="0.0" y="0.0" width="59.5" height="20.5"/>
@@ -79,24 +85,52 @@
                                         </subviews>
                                     </stackView>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-qS-mOP">
-                                        <rect key="frame" x="0.0" y="226" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="224" width="343" height="257"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="fiU-LP-WgU" appends="YES" id="rPZ-R1-ORO"/>
-                                        </connections>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Nd1-qS-mOP" secondAttribute="height" multiplier="4:3" id="K1x-jT-eMB"/>
+                                        </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-P8-zcp">
+                                        <rect key="frame" x="0.0" y="489" width="108" height="50"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jNK-dI-YFy">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ZAv-vR-Fex"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ms8-We-v99"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="17A-Ur-728" appends="YES" id="Eq4-W6-t9f"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoLibraryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JJV-gl-sh0">
+                                                <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RYE-qE-BzT"/>
+                                                    <constraint firstAttribute="width" constant="50" id="qpX-df-QuT"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="B6X-xk-lKH" appends="YES" id="o55-Lm-llM"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="BTz-gT-oqK" secondAttribute="trailing" id="kw6-Yj-06L"/>
-                                    <constraint firstAttribute="trailing" secondItem="lsV-WE-44w" secondAttribute="trailing" id="nYu-pf-Ith"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qnm-mS-gXs" secondAttribute="trailing" id="MQa-F4-teI"/>
                                     <constraint firstAttribute="trailing" secondItem="fDR-yI-q0G" secondAttribute="trailing" id="on3-W0-sdQ"/>
                                     <constraint firstAttribute="trailing" secondItem="CYR-SZ-TB5" secondAttribute="trailing" id="t2S-d8-uNA"/>
                                     <constraint firstAttribute="trailing" secondItem="STn-oK-9Ks" secondAttribute="trailing" id="vQz-ZV-yS4"/>
+                                    <constraint firstItem="Qnm-mS-gXs" firstAttribute="leading" secondItem="6eM-qn-HcQ" secondAttribute="leading" id="z7y-qc-Rdc"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6eM-qn-HcQ" secondAttribute="bottom" id="2b3-tP-pWJ"/>
                             <constraint firstItem="6eM-qn-HcQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="KUd-K2-xBZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6eM-qn-HcQ" secondAttribute="trailing" id="k6e-kT-BYf"/>
                             <constraint firstItem="6eM-qn-HcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xiG-a6-ZEO"/>
@@ -112,23 +146,30 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cameraImageView" destination="jNK-dI-YFy" id="KeA-vT-fhd"/>
                         <outlet property="dateTextField" destination="lsV-WE-44w" id="am8-vO-1iz"/>
                         <outlet property="descriptionTextField" destination="CYR-SZ-TB5" id="hPZ-z7-Nu1"/>
                         <outlet property="locationTextField" destination="fDR-yI-q0G" id="e8y-Xr-nGa"/>
                         <outlet property="nameTextField" destination="STn-oK-9Ks" id="qXD-rO-Jio"/>
-                        <outlet property="photoImageView" destination="Nd1-qS-mOP" id="6f1-8I-DWi"/>
+                        <outlet property="photoAlbumImageView" destination="JJV-gl-sh0" id="a0F-y1-12E"/>
+                        <outlet property="photoImageView" destination="Nd1-qS-mOP" id="pu5-r3-o3M"/>
                         <outlet property="prioritySelector" destination="1OH-5F-eSv" id="zfX-Vw-XOR"/>
                         <outlet property="workOrderTextField" destination="BTz-gT-oqK" id="Nf9-K3-RL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fiU-LP-WgU">
+                <tapGestureRecognizer id="17A-Ur-728">
                     <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="4Gf-mW-yRu"/>
+                        <action selector="selectImageFromCamera:" destination="BYZ-38-t0r" id="ikx-O4-eLa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="B6X-xk-lKH">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="rSN-Kk-6pf"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1546" y="-958"/>
+            <point key="canvasLocation" x="1544.8" y="-958.4707646176912"/>
         </scene>
         <!--Work Order Completed Pop Up View Controller-->
         <scene sceneID="wjk-w7-j4V">
@@ -366,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33k-HL-4Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="-304"/>
+            <point key="canvasLocation" x="1834" y="-280"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="Y0a-dp-P9T">
@@ -674,6 +715,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CameraIcon" width="204" height="204"/>
+        <image name="PhotoLibraryIcon" width="256" height="256"/>
         <image name="defaultPhoto" width="320" height="320"/>
         <image name="thomas" width="74" height="73"/>
     </resources>

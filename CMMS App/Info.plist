@@ -42,6 +42,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allows you to add a photo to your work order.</string>
+	<string>Add new photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Add new photos</string>
 </dict>
 </plist>

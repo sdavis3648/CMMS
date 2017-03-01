@@ -10,10 +10,10 @@
 		09C4C7B11E43E5EA00183551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4C7B01E43E5EA00183551 /* AppDelegate.swift */; };
 		09C4C7B31E43E5EA00183551 /* NewWorkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4C7B21E43E5EA00183551 /* NewWorkOrderViewController.swift */; };
 		09C4C7B61E43E5EA00183551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C4C7B41E43E5EA00183551 /* Main.storyboard */; };
-		09C4C7B81E43E5EA00183551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C4C7B71E43E5EA00183551 /* Assets.xcassets */; };
 		09C4C7BB1E43E5EA00183551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */; };
 		09C4C7C61E43E5EA00183551 /* CMMS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4C7C51E43E5EA00183551 /* CMMS_AppTests.swift */; };
 		1A320BBC400FF99556736E06 /* Pods_CMMS_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */; };
+		620E3EBE1E666E0200D06E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620E3EBD1E666E0200D06E4A /* Assets.xcassets */; };
 		62B212FD1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */; };
 		62B212FF1E4AA1DC00E4E8C6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */; };
 		62B213031E4AB4FA00E4E8C6 /* WorkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */; };
@@ -43,13 +43,13 @@
 		09C4C7B01E43E5EA00183551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C4C7B21E43E5EA00183551 /* NewWorkOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkOrderViewController.swift; sourceTree = "<group>"; };
 		09C4C7B51E43E5EA00183551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09C4C7B71E43E5EA00183551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09C4C7BA1E43E5EA00183551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09C4C7BC1E43E5EA00183551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C4C7C11E43E5EA00183551 /* CMMS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CMMS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C4C7C51E43E5EA00183551 /* CMMS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMS_AppTests.swift; sourceTree = "<group>"; };
 		09C4C7C71E43E5EA00183551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.debug.xcconfig"; sourceTree = "<group>"; };
+		620E3EBD1E666E0200D06E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderListTableViewController.swift; sourceTree = "<group>"; };
 		62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderViewController.swift; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 				09C4C7B21E43E5EA00183551 /* NewWorkOrderViewController.swift */,
 				62B213121E569A1A00E4E8C6 /* WorkOrderCompletedPopUpViewController.swift */,
 				62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */,
+				620E3EBD1E666E0200D06E4A /* Assets.xcassets */,
 				09C4C7B41E43E5EA00183551 /* Main.storyboard */,
-				09C4C7B71E43E5EA00183551 /* Assets.xcassets */,
 				09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */,
 				09C4C7BC1E43E5EA00183551 /* Info.plist */,
 				62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */,
@@ -253,7 +253,7 @@
 			files = (
 				09C4C7BB1E43E5EA00183551 /* LaunchScreen.storyboard in Resources */,
 				62B2131F1E58ABF800E4E8C6 /* GoogleService-Info.plist in Resources */,
-				09C4C7B81E43E5EA00183551 /* Assets.xcassets in Resources */,
+				620E3EBE1E666E0200D06E4A /* Assets.xcassets in Resources */,
 				09C4C7B61E43E5EA00183551 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
