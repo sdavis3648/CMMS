@@ -29,13 +29,26 @@ class CreateAccountViewController: UIViewController {
             else {
                 print("user signed in!")
                 user?.sendEmailVerification()
-                print(user?.isEmailVerified)
             }
         }
     }
     
+    
+    // For pressing return on the keyboard to dismiss keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        for textField in self.view.subviews where textField is UITextField {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
         super.viewDidLoad()
         
 

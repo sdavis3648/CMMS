@@ -14,6 +14,7 @@
 		09C4C7C61E43E5EA00183551 /* CMMS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4C7C51E43E5EA00183551 /* CMMS_AppTests.swift */; };
 		1A320BBC400FF99556736E06 /* Pods_CMMS_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */; };
 		620E3EBE1E666E0200D06E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620E3EBD1E666E0200D06E4A /* Assets.xcassets */; };
+		620E3EC21E67A35200D06E4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 620E3EC11E67A35200D06E4A /* GoogleService-Info.plist */; };
 		62B212FD1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */; };
 		62B212FF1E4AA1DC00E4E8C6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */; };
 		62B213031E4AB4FA00E4E8C6 /* WorkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */; };
@@ -24,7 +25,6 @@
 		62B213191E57E0DE00E4E8C6 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B213181E57E0DE00E4E8C6 /* WorkOrder.swift */; };
 		62B2131B1E58A6D200E4E8C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B2131A1E58A6D200E4E8C6 /* LoginViewController.swift */; };
 		62B2131D1E58A74100E4E8C6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B2131C1E58A74100E4E8C6 /* CreateAccountViewController.swift */; };
-		62B2131F1E58ABF800E4E8C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */; };
 		DBFC1554C0AF657D8E86CBF9 /* Pods_CMMS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A7F9938CD081EDC4BE9D37 /* Pods_CMMS_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +50,7 @@
 		09C4C7C71E43E5EA00183551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DCBF331F4EBDF2AD41D737E /* Pods-CMMS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.debug.xcconfig"; sourceTree = "<group>"; };
 		620E3EBD1E666E0200D06E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		620E3EC11E67A35200D06E4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62B212FC1E4A9F6500E4E8C6 /* WorkOrderListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderListTableViewController.swift; sourceTree = "<group>"; };
 		62B212FE1E4AA1DC00E4E8C6 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		62B213021E4AB4FA00E4E8C6 /* WorkOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		62B213181E57E0DE00E4E8C6 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrder.swift; path = ../WorkOrder.swift; sourceTree = "<group>"; };
 		62B2131A1E58A6D200E4E8C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62B2131C1E58A74100E4E8C6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CEC3952512077F60A3AC5DD /* Pods-CMMS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS App.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS App/Pods-CMMS App.release.xcconfig"; sourceTree = "<group>"; };
 		73048C5CA1DE168F5A6CDE08 /* Pods-CMMS AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMMS AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMMS AppTests/Pods-CMMS AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C9DA20B67D597393A11C8C /* Pods_CMMS_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMMS_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +127,7 @@
 				09C4C7B41E43E5EA00183551 /* Main.storyboard */,
 				09C4C7B91E43E5EA00183551 /* LaunchScreen.storyboard */,
 				09C4C7BC1E43E5EA00183551 /* Info.plist */,
-				62B2131E1E58ABF800E4E8C6 /* GoogleService-Info.plist */,
+				620E3EC11E67A35200D06E4A /* GoogleService-Info.plist */,
 			);
 			path = "CMMS App";
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C4C7BB1E43E5EA00183551 /* LaunchScreen.storyboard in Resources */,
-				62B2131F1E58ABF800E4E8C6 /* GoogleService-Info.plist in Resources */,
+				620E3EC21E67A35200D06E4A /* GoogleService-Info.plist in Resources */,
 				620E3EBE1E666E0200D06E4A /* Assets.xcassets in Resources */,
 				09C4C7B61E43E5EA00183551 /* Main.storyboard in Resources */,
 			);

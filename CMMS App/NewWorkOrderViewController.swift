@@ -9,12 +9,14 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import MobileCoreServices
 
 class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Properties
     
-    private var localPath: URL!
+    var localPath: URL!
+    var newImage: Bool?
     
     @IBOutlet weak var workOrderTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -26,8 +28,22 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
     @IBOutlet weak var cameraImageView: UIImageView!
     @IBOutlet weak var photoAlbumImageView: UIImageView!
     
+    // For pressing return on the keyboard to dismiss keyboard
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        for textField in self.view.subviews where textField is UITextField {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
-        
+        nameTextField.text = FIRAuth.auth()?.currentUser?.email
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -37,20 +53,19 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
 
     @IBAction func showPopUp(_ sender: Any) {
         //Save to Firebase Database
-        
         let saveWorkOrder = DataService()
         let woNumber:Int? = Int(self.workOrderTextField.text!)
         let description = self.descriptionTextField.text
         let priority = self.prioritySelector.titleForSegment(at: prioritySelector.selectedSegmentIndex)
         
-        
+        //Save tk Firebase Storage
         let imageName = NSUUID().uuidString
         let storageRef = FIRStorage.storage().reference().child("WorkOrderPhotos/\(imageName).jpg")
         
         if let uploadData = UIImageJPEGRepresentation(self.photoImageView.image!, 1.0) {
             storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
                 if error != nil {
-                    print(error)
+                    print(error!)
                     return
                 }
                 let photoURL = metadata?.downloadURL()?.absoluteString
@@ -89,71 +104,53 @@ class NewWorkOrderViewController: UIViewController, UITextFieldDelegate, UIImage
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-
-        // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        
-        // Set photoImageView to display the selected image.
-        photoImageView.image = selectedImage
-        
-        // Dismiss the picker.
-        dismiss(animated: true, completion: nil)
-        
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let imageUrl          = info[UIImagePickerControllerReferenceURL] as? NSURL
-        let imageName         = imageUrl?.lastPathComponent
-        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let photoURL          = NSURL(fileURLWithPath: documentDirectory)
-        let localPath         = photoURL.appendingPathComponent(imageName!)
-        
-        if !FileManager.default.fileExists(atPath: localPath!.path) {
-            do {
-                try UIImageJPEGRepresentation(image, 1.0)?.write(to: localPath!)
-                print("file saved")
-            }catch {
-                print("error saving file")
+        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
+        self.dismiss(animated: true, completion: nil)
+        if mediaType.isEqual(to: kUTTypeImage as String) {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            photoImageView.image = image
+            if (newImage == true) {
+                UIImageWriteToSavedPhotosAlbum(image, self, #selector(NewWorkOrderViewController.image(image:didFinishSavingWithError:contextInfo:)), nil)
+            } else if mediaType.isEqual(to: kUTTypeImage as String) {
+                // Code to support video here
             }
         }
-        else {
-            print("file already exists")
-        }
+    }
 
+    func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
+        if error != nil {
+            let alert = UIAlertController(title: "Save Failed",
+                                          message: "Failed to save image",
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: "OK",
+                                             style: .cancel, handler: nil)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true,
+                         completion: nil)
+        }
     }
     
     @IBAction func selectImageFromCamera(_ sender: UITapGestureRecognizer) {
-        
-        workOrderTextField.resignFirstResponder()
-        nameTextField.resignFirstResponder()
-        dateTextField.resignFirstResponder()
-        locationTextField.resignFirstResponder()
-        descriptionTextField.resignFirstResponder()
-        
-        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
             present(imagePicker, animated: true, completion: nil)
+            newImage = true
         }
     }
-    
+
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        
-        workOrderTextField.resignFirstResponder()
-        nameTextField.resignFirstResponder()
-        dateTextField.resignFirstResponder()
-        locationTextField.resignFirstResponder()
-        descriptionTextField.resignFirstResponder()
-        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
-            imagePicker.allowsEditing = true
+            imagePicker.mediaTypes = [kUTTypeImage as String]
+            imagePicker.allowsEditing = false
             present(imagePicker, animated: true, completion: nil)
+            newImage = false
         }
     }
     
